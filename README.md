@@ -52,7 +52,8 @@ CREATE TABLE MonitorObjects (
 -- Create Table MonitorObjects End
 ```
 ## Script MonitorObjects
-Download the latest MonitorObjects Year-Month-Date.zip 
+Download the latest MonitorObjects Year-Month-Date.zip.
+ 
 Change the Strings 
 
 ``` 
