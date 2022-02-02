@@ -5,6 +5,16 @@ is a concept on how to monitor Data by using MS-SQL and Powershell, so it is nec
 MS-SQL and Invoke-SQL module ( Download SQL Studio managment or download the modules from 
 https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15 ) 
 
+## Create Database 
+Run the code in MS T-SQL 
+
+```
+-- Create Database Start
+CREATE DATABASE AppPortal
+-- Create Database End
+```
+
+
 ## Table MonitorObjects
 This Table contains objects liks files,licence, certification and much more that which need to be monitored.
 ```
@@ -22,15 +32,8 @@ This Table contains objects liks files,licence, certification and much more that
  ```
 ---------------------------------------------
 
-## Create Database and Tables
+## Create Table MonitorObjects
 Run the code in MS T-SQL 
-
-```
--- Create Database Start
-CREATE DATABASE AppPortal
--- Create Database End
-```
-
 ```
 -- Create Table MonitorObjects Start
 CREATE TABLE MonitorObjects (
@@ -47,4 +50,13 @@ CREATE TABLE MonitorObjects (
  Message varchar(MAX)
 );
 -- Create Table MonitorObjects End
+```
+## Script MonitorObjects
+Download the latest MonitorObjects Year-Month-Date.zip 
+Change the Strings 
+
+``` 
+$Mailto = "" 
+$MailFrom = "" 
+$SmtpServer = ""
 ```
