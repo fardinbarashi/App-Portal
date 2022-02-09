@@ -51,7 +51,7 @@ Install MS-SQL and Invoke-SQL module ( Download SQL Studio managment or download
 https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-ver15 ) 
 recommended Powershell version 7, Works with powershell 5.1.
 ```
-- Column       -     Contains            -     Example
+- Column       -     Contains           -     Example
 - ID          -     Primary Key         -     Example : 1
 - ServerName  -     ServerName          -     Example : Web01.Google.com
 - ExpireDate  -     Object Expire Date  -     Example : The date on which the object will expire, Example : 2022-03-24 00:00:00.000
@@ -72,7 +72,7 @@ Run the code in MS T-SQL
 CREATE TABLE MonitorObjects (
  ID bigint PRIMARY KEY NOT NULL,
  ServerName varchar(MAX) NULL,
- ExpireDate datetime NULL,
+ ExpireDate datetime NOT NULL,
  ObjectName varchar(MAX) NULL,
  Enviroment varchar(MAX) NULL,
  Template varchar(MAX) NULL,
@@ -126,9 +126,9 @@ Run the code in MS T-SQL
 -- Create Table Bot Start
 CREATE TABLE Bot (
  ID bigint PRIMARY KEY NOT NULL,
- TodaysEvent  datetime NULL,
- TodaysEventDateStart  datetime NULL,
- TodaysEventDateEnd  datetime NULL,
+ TodaysEvent  datetime NOT NULL,
+ TodaysEventDateStart  datetime NOT NULL,
+ TodaysEventDateEnd  datetime NOT NULL,
  System varchar(MAX) NULL,
  CurrentVersion varchar(MAX) NULL,
  UpgradeVersion varchar(MAX) NULL,
@@ -137,7 +137,8 @@ CREATE TABLE Bot (
  ChangeRequest varchar(MAX) NULL,
  SandBox varchar(MAX) NULL,
  Production varchar(MAX) NULL,
- Message varchar(MAX) NULL
+ Message varchar(MAX) NOT NULL
+);
 -- Create Table Bot End
 ```
 
