@@ -118,6 +118,7 @@ recommended Powershell version 7, Works with powershell 5.1.
 - SandBox               -     Name on the enviroment -     Example : Sandbox01
 - Production            -     Name on the enviroment -     Example : Production01
 - Message               -     Message                -     Example : Today we are going to upgrade our Exchange in Sandbox
+- EmailRecipients       -     Email                  -     Example : John.Doe@contoso.com
  ```
 
 ## Create Table BOT
@@ -137,7 +138,8 @@ CREATE TABLE Bot (
  ChangeRequest varchar(MAX) NULL,
  SandBox varchar(MAX) NULL,
  Production varchar(MAX) NULL,
- Message varchar(MAX) NOT NULL
+ Message varchar(MAX) NOT NULL,
+ EmailRecipients varchar(MAX) NULL
 );
 -- Create Table Bot End
 ```
