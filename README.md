@@ -127,9 +127,9 @@ Run the code in MS T-SQL
 -- Create Table Bot Start
 CREATE TABLE Bot (
  ID bigint PRIMARY KEY NOT NULL,
- TodaysEvent  datetime NOT NULL,
- TodaysEventDateStart  datetime NOT NULL,
- TodaysEventDateEnd  datetime NOT NULL,
+ TodaysEvent datetime NOT NULL,
+ TodaysEventDateStart datetime NOT NULL,
+ TodaysEventDateEnd datetime NOT NULL,
  System varchar(MAX) NULL,
  CurrentVersion varchar(MAX) NULL,
  UpgradeVersion varchar(MAX) NULL,
