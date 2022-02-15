@@ -15,7 +15,7 @@
       <ul><li><a href="#create-database">Create Database</a></li></ul>
       <ul><li><a href="#monitorobjects">MonitorObjects</a></li></ul>
       <ul><li><a href="#bot">Bot</a></li></ul>
-    <li><a href="#install">Install</a></li>
+    <li><a href="#setup">Setup</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -192,7 +192,7 @@ CREATE TABLE Bot (
 Download the latest BOT Year-Month-Date.zip.
  
 Change the Strings 
-
+* Bot
 ``` 
 Row - String 
 16 - $Mailto = "" 
@@ -203,10 +203,20 @@ Row - String
 256 - URI
 ```
 
-<!-- INSTALL -->
-## Install 
+* AlphaBot
+``` 
+Row - String 
+16 - $Mailto = "" 
+17 - $MailFrom = "" 
+18 - $SmtpServer = ""
+247 - summary
+249 - title
+256 - URI
+```
 
 
+<!-- SETUP -->
+## Setup 
 
 <!-- ROADMAP -->
 ## Roadmap 
