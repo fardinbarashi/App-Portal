@@ -11,10 +11,11 @@
       <a href="#AppPortal">About The Project</a>
     </li>
     <li>
-      <a href="#install">Install</a>
+      <a href="#modules">Modules</a>
       <ul><li><a href="#create-database">Create Database</a></li></ul>
       <ul><li><a href="#monitorobjects">MonitorObjects</a></li></ul>
       <ul><li><a href="#bot">Bot</a></li></ul>
+    <li><a href="#install">Install</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -30,8 +31,8 @@ https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?vi
 recommended Powershell version 7, Works with powershell 5.1.
 Office 365 is required for the bot and Teamsfunction.
 
-<!-- INSTALL -->
-## Install 
+<!-- MODULES -->
+## Modules 
 
 <!-- DATABASE -->
 ## Create Database 
@@ -158,7 +159,8 @@ Row - String
 256 - URI
 ```
 
-
+<!-- INSTALL -->
+## Install 
 
 
 
