@@ -43,6 +43,7 @@ To create database AppPortal Run the code in MS T-SQL
 CREATE DATABASE AppPortal
 -- Create Database End
 ```
+---------------------------------------------
 
 <!-- MONITOROBJECTS -->
 ## MonitorObjects
@@ -63,7 +64,6 @@ recommended Powershell version 7, Works with powershell 5.1.
 - System      -     SystemName          -     Example : GCP Google Cloud Platform
 - Message     -     Specfic message     -     Example : Check FAQ for solution   
  ```
----------------------------------------------
 
 ## Create Table MonitorObjects
 Run the code in MS T-SQL 
@@ -97,10 +97,12 @@ Row - String
 18 - $SmtpServer = ""
 ```
 
+---------------------------------------------
+
 <!-- BOT -->
 ## Bot
-All releses after Bot 2022-02-11.zip creates online-meetings in team.
-If you wish to skip online-meeting head over to AlphaBot sections in this module
+**All releses after Bot 2022-02-11.zip creates online-meetings in team.
+If you wish to skip online-meeting head over to AlphaBot sections in this module**
 
 Bot Table contains contains objects that will start the same day as todaydate.
 Install MS-SQL and Invoke-SQL module ( Download SQL Studio managment or download the modules from 
@@ -190,9 +192,22 @@ CREATE TABLE Bot (
 
 ## Script BOT
 Download the latest BOT Year-Month-Date.zip.
- 
-Change the Strings 
-* Bot
+**All releses after Bot 2022-02-11.zip creates online-meetings in team.
+If you wish to skip online-meeting head over to AlphaBot sections in this module**
+
+Bot 
+Required Graph API Permissions
+For Graph API access, we need an Azure AD application and acquire Access Token with required permissions (Application or Delegated permissions) to use in Graph API calls.
+
+Delegated permissions
+* Calendars.Read – Allows to read events in the signed-in user calendars.
+* Calendars.Read.Shared – Allows to read events in all calendars that the signed-in user can access, including shared calendars and another user calendar where the singed-in user has delegated access.
+
+Application permissions
+* Calendars.Read – Allows to read events from all user calendars (current user, other users, and shared calendars) without a signed-in user. 
+
+Change the Strings in the powershell file
+
 ``` 
 Row - String 
 16 - $Mailto = "" 
@@ -204,6 +219,8 @@ Row - String
 ```
 
 * AlphaBot
+Change the Strings in the powershell file
+
 ``` 
 Row - String 
 16 - $Mailto = "" 
