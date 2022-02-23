@@ -255,6 +255,7 @@ MonitorSystemServices is a tool to monitor services. If service is down, the scr
 - Office                -     Office                 -     Example : Production
  ```
 ## Create Table MonitorSystemServices
+Run the code in MS T-SQL
 ```
 -- Create Table MonitorSystemServices Start
 CREATE TABLE MonitorSystemServices (
@@ -278,6 +279,7 @@ CREATE TABLE MonitorSystemServices (
 MonitorSystemSites is a tool to monitor IIS-Sites. If Sites is down, the script will restart the Sites.
 
 ## Create Table MonitorSystemSites
+Run the code in MS T-SQL
 ```
 -- Create Table MonitorSystemSites Start
 CREATE TABLE MonitorSystemSites (
@@ -301,6 +303,7 @@ CREATE TABLE MonitorSystemSites (
 MonitorSystemSitesAppPool is a tool to monitor IIS-Appools . If Appools is down, the script will restart the Appools.
 
 ## Create Table MonitorSystemSitesAppPool
+Run the code in MS T-SQL
 ```
 -- Create Table MonitorSystemSitesAppPool Start
 CREATE TABLE MonitorSystemSitesAppPool (
