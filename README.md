@@ -13,8 +13,11 @@
     <li>
       <a href="#modules">Modules</a>
       <ul><li><a href="#create-database">Create Database</a></li></ul>
-      <ul><li><a href="#monitorobjects">MonitorObjects</a></li></ul>
+      <ul><li><a href="#monitorobjects">Monitor Objects</a></li></ul>
       <ul><li><a href="#bot">Bot</a></li></ul>
+      <ul><li><a href="#monitorsystemservices">Monitor System Services</a></li></ul>
+      <ul><li><a href="#monitorsystemsites">Monitor System Sites</a></li></ul>
+      <ul><li><a href="#monitorsystemsitesapppool">Monitor System Sites AppPool</a></li></ul>      
     <li><a href="#setup">Setup</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -33,6 +36,8 @@ Office 365 is required for the bot and Teamsfunction.
 
 <!-- MODULES -->
 ## Modules 
+---------------------------------------------
+---------------------------------------------
 
 <!-- DATABASE -->
 ## Create Database 
@@ -43,6 +48,7 @@ To create database AppPortal Run the code in MS T-SQL
 CREATE DATABASE AppPortal
 -- Create Database End
 ```
+---------------------------------------------
 ---------------------------------------------
 
 <!-- MONITOROBJECTS -->
@@ -98,11 +104,13 @@ Row - String
 ```
 
 ---------------------------------------------
+---------------------------------------------
 
 <!-- BOT -->
 ## Bot
 **All releses after Bot 2022-02-11.zip creates online-meetings in team.
 If you wish to skip online-meeting head over to AlphaBot sections in this module**
+Alphabot messes team-channel about todays events.
 
 Bot Table contains contains objects that will start the same day as todaydate.
 Install MS-SQL and Invoke-SQL module ( Download SQL Studio managment or download the modules from 
@@ -230,7 +238,88 @@ Row - String
 249 - title
 256 - URI
 ```
+---------------------------------------------
+---------------------------------------------
+<!-- MONITORSYSTEMSERVICES -->
+## MonitorSystemServices
+MonitorSystemServices is a tool to monitor services. If service is down, the script will restart the services.
+```
+- Column                -     Contains               -     Exampl
+- ID                    -     Primary Key            -     Example : 1
+- Servername            -     Todays Event           -     Example : Production01.contoso.com
+- Ipadress              -     When the event starts  -     Example : 192.168.0.10
+- System                -     System Name            -     Example : Production01
+- ServiceName           -     Name of the Service    -     Example : W3SVC 
+- DisplayName           -     Displayed Name         -     Example : World Wide Web...
+- Description           -     Description            -     Example : Service to IIS
+- Office                -     Office                 -     Example : Production
+ ```
+## Create Table MonitorSystemServices
+```
+-- Create Table MonitorSystemServices Start
+CREATE TABLE MonitorSystemServices (
+ ID bigint PRIMARY KEY NOT NULL,
+ Servername varchar(MAX) NULL,
+ Ipadress varchar(MAX) NULL,
+ System varchar(MAX) NULL,
+ ServiceName varchar(MAX) NULL,
+ DisplayName varchar(MAX) NULL,
+ Description varchar(MAX) NULL,
+ Office varchar(MAX) NULL,
+);
+-- Create Table MonitorSystemServices End
+```
+## Script MonitorSystemServices
 
+---------------------------------------------
+---------------------------------------------  
+ <!-- MONITORSYSTEMSITES -->
+## MonitorSystemSites
+MonitorSystemSites is a tool to monitor IIS-Sites. If Sites is down, the script will restart the Sites.
+
+## Create Table MonitorSystemSites
+```
+-- Create Table MonitorSystemSites Start
+CREATE TABLE MonitorSystemSites (
+ ID bigint PRIMARY KEY NOT NULL,
+ Servername varchar(MAX) NULL,
+ Ipadress varchar(MAX) NULL,
+ System varchar(MAX) NULL,
+ ServiceName varchar(MAX) NULL,
+ DisplayName varchar(MAX) NULL,
+ Description varchar(MAX) NULL,
+ Office varchar(MAX) NULL,
+);
+-- Create Table MonitorSystemSites End
+```
+## Script MonitorSystemSites
+
+---------------------------------------------
+---------------------------------------------     
+<!-- MONITORSYSTEMSITESAPPPOOL -->
+## MonitorSystemSitesAppPool
+MonitorSystemSitesAppPool is a tool to monitor IIS-Appools . If Appools is down, the script will restart the Appools.
+
+## Create Table MonitorSystemSitesAppPool
+```
+-- Create Table MonitorSystemSitesAppPool Start
+CREATE TABLE MonitorSystemSitesAppPool (
+ ID bigint PRIMARY KEY NOT NULL,
+ Servername varchar(MAX) NULL,
+ Ipadress varchar(MAX) NULL,
+ System varchar(MAX) NULL,
+ ServiceName varchar(MAX) NULL,
+ DisplayName varchar(MAX) NULL,
+ Description varchar(MAX) NULL,
+ Office varchar(MAX) NULL,
+);
+-- Create Table MonitorSystemSitesAppPool End
+```
+
+## Script MonitorSystemSitesAppPool
+ 
+---------------------------------------------
+---------------------------------------------   
 
 <!-- SETUP -->
 ## Setup 
